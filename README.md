@@ -22,7 +22,7 @@ mvn install
 Файлы распаковываются в текущую директорию, откуда выполняется программа.
 
 ```bash
-cat ./archived | ./archiver 
+cat ./archived | ./archiver.jar 
 ```
 ```bash
 ./archiver.jar < ./archived
