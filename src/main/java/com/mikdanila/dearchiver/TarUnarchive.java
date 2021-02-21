@@ -75,7 +75,7 @@ public class TarUnarchive implements Unarchive {
      * @param archiveInputStream input stream {@link ArchiveInputStream}, which use to unarchive files
      * @param inputFile input empty file to unarchive
      */
-    protected void untarFile(ArchiveInputStream archiveInputStream, File inputFile){
+    private void untarFile(ArchiveInputStream archiveInputStream, File inputFile){
         File parent = inputFile.getParentFile();
         // Try to create parent directories if they doesn't exists
         if (parent != null && !parent.isDirectory() && !parent.mkdirs()) {
@@ -93,7 +93,7 @@ public class TarUnarchive implements Unarchive {
     /**
      * @param inputFile input file to create directory
      */
-    protected void untarDirectory(File inputFile){
+    private void untarDirectory(File inputFile){
         if (!inputFile.isDirectory() && !inputFile.mkdirs()) {
             log.error(inputFile + " directory can`t create");
         }
